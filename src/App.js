@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+
+
 // Using export object info into a React JSX code. Like calling object properties in JS
 export const audreyInfo = {
     phone: 'Business Phone: 830-570-3628',
@@ -12,6 +14,15 @@ function getRandomInt(max){
     return Math.floor(Math.random()* (max + 1));
 }
 
+function CoreConcepts(props){
+    return(
+
+        <li>
+            <h1>{props.project}</h1>
+            <p>{props.description}</p>
+        </li>
+    );
+}
 // React Header component
 function Header(){
       // call for random string value in adjectives list , declare within scope of function
@@ -23,9 +34,11 @@ function Header(){
         <img src= {logo} className="App-logo" alt="logo" />
           <h1> Audrey Tan:</h1>
         <p>
+            {/* Curly brackets make this a dynamic value that is being called when building html code. */}
             {audreyFullStackAdj} Full-Stack Web Developer
         </p>
           <h2> For business inquiries: </h2>
+          {/* Curly brackets call the object audreyInfo and the declared properties: phone and email. Like JS object.*/}
           <h2> {audreyInfo.phone}</h2>
           <h2> {audreyInfo.email}</h2>
         <a
@@ -44,7 +57,13 @@ function App() {
   return (
     <div className="App">
       <Header />
+        {/*Adding unordered list of projects and their description to load underneath header using reusable props*/}
+        <ul>
+        <CoreConcepts project="memespace.fun" description="Full-stack online multiplayer meme-making competition." />
+        <CoreConcepts project="movie saver" description="Full-stack website to save movies you've watched, and create a shareable movie list!" />
+        </ul>
       <button>This is a button</button>
+
     </div>
   );
 }
