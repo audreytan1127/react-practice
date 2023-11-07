@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 
+const audreyAdjectives = ['Hard-working', 'Fast-learning', 'Reliable', 'Respectable', 'Personable', 'Leadership-qualified'];
+function getRandomInt(max){
+    return Math.floor(Math.random()* (max + 1));
+}
 function Header(){
   return(
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+          <h1> Audrey Tan:</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+            {audreyAdjectives[getRandomInt(5)]} Full-Stack Web Developer
         </p>
         <a
             className="App-link"
