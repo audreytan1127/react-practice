@@ -82,24 +82,15 @@ function App() {
                 <ol className="row">
                     <AudreyLang language={AUDREY_LANG[0].language} proficiency={AUDREY_LANG[0].proficiency}
                                 location={AUDREY_LANG[0].location}/>
-                    <AudreyLang language={AUDREY_LANG[1].language} proficiency={AUDREY_LANG[1].proficiency}
-                                location={AUDREY_LANG[1].location}/>
-                    <AudreyLang language={AUDREY_LANG[2].language} proficiency={AUDREY_LANG[2].proficiency}
-                                location={AUDREY_LANG[2].location}/>
-                    <AudreyLang language={AUDREY_LANG[3].language} proficiency={AUDREY_LANG[3].proficiency}
-                                location={AUDREY_LANG[3].location}/>
-                    <AudreyLang language={AUDREY_LANG[4].language} proficiency={AUDREY_LANG[4].proficiency}
-                                location={AUDREY_LANG[4].location}/>
-                    <AudreyLang language={AUDREY_LANG[5].language} proficiency={AUDREY_LANG[5].proficiency}
-                                location={AUDREY_LANG[5].location}/>
-                    <AudreyLang language={AUDREY_LANG[6].language} proficiency={AUDREY_LANG[6].proficiency}
-                                location={AUDREY_LANG[6].location}/>
-                    <AudreyLang language={AUDREY_LANG[7].language} proficiency={AUDREY_LANG[7].proficiency}
-                                location={AUDREY_LANG[7].location}/>
-                    <AudreyLang language={AUDREY_LANG[8].language} proficiency={AUDREY_LANG[8].proficiency}
-                                location={AUDREY_LANG[8].location}/>
-                    <AudreyLang language={AUDREY_LANG[9].language} proficiency={AUDREY_LANG[9].proficiency}
-                                location={AUDREY_LANG[9].location}/>
+                    <AudreyLang {...AUDREY_LANG[1]} />
+                    <AudreyLang {...AUDREY_LANG[2]}/>
+                    <AudreyLang {...AUDREY_LANG[3]}/>
+                    <AudreyLang {...AUDREY_LANG[4]}/>
+                    <AudreyLang {...AUDREY_LANG[5]}/>
+                    <AudreyLang {...AUDREY_LANG[6]}/>
+                    <AudreyLang {...AUDREY_LANG[7]}/>
+                    <AudreyLang {...AUDREY_LANG[8]}/>
+                    <AudreyLang {...AUDREY_LANG[9]}/>
                 </ol>
             </div>
             <button>This is a button</button>
