@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {AUDREY_LANG} from "./data";
 
 
 // Using export object info into a React JSX code. Like calling object properties in JS
@@ -14,15 +15,6 @@ function getRandomInt(max){
     return Math.floor(Math.random()* (max + 1));
 }
 
-function CoreConcepts(props){
-    return(
-
-        <li>
-            <h1>{props.project}</h1>
-            <p>{props.description}</p>
-        </li>
-    );
-}
 // React Header component
 function Header(){
       // call for random string value in adjectives list , declare within scope of function
@@ -52,6 +44,24 @@ function Header(){
   )
 }
 
+function AudreyProjects(props){
+    return(
+        <li>
+            <h1>{props.project}</h1>
+            <p>{props.description}</p>
+        </li>
+    );
+}
+
+function AudreyLang(props){
+    return(
+        <li>
+            <h2>{props.language}</h2>
+            <h3>{props.proficiency}</h3>
+            <p>{props.location}</p>
+        </li>
+    );
+}
 // App function to return JSX code to build the header and add a button after Header.
 function App() {
   return (
@@ -59,9 +69,24 @@ function App() {
       <Header />
         {/*Adding unordered list of projects and their description to load underneath header using reusable props*/}
         <ul>
-        <CoreConcepts project="memespace.fun" description="Full-stack online multiplayer meme-making competition." />
-        <CoreConcepts project="movie saver" description="Full-stack website to save movies you've watched, and create a shareable movie list!" />
+        <AudreyProjects project="memespace.fun" description="Full-stack online multiplayer meme-making competition." />
+        <AudreyProjects project="movie saver" description="Full-stack website to save movies you've watched, and create a shareable movie list!" />
         </ul>
+        <div>
+            <ol>
+
+                    <AudreyLang language={AUDREY_LANG[0].language} proficiency={AUDREY_LANG[0].proficiency} location={AUDREY_LANG[0].location} />
+                    <AudreyLang language={AUDREY_LANG[1].language} proficiency={AUDREY_LANG[1].proficiency} location={AUDREY_LANG[1].location} />
+                    <AudreyLang language={AUDREY_LANG[2].language} proficiency={AUDREY_LANG[2].proficiency} location={AUDREY_LANG[2].location} />
+                    <AudreyLang language={AUDREY_LANG[3].language} proficiency={AUDREY_LANG[3].proficiency} location={AUDREY_LANG[3].location} />
+                    <AudreyLang language={AUDREY_LANG[4].language} proficiency={AUDREY_LANG[4].proficiency} location={AUDREY_LANG[4].location} />
+                    <AudreyLang language={AUDREY_LANG[5].language} proficiency={AUDREY_LANG[5].proficiency} location={AUDREY_LANG[5].location} />
+                    <AudreyLang language={AUDREY_LANG[6].language} proficiency={AUDREY_LANG[6].proficiency} location={AUDREY_LANG[6].location} />
+                    <AudreyLang language={AUDREY_LANG[7].language} proficiency={AUDREY_LANG[7].proficiency} location={AUDREY_LANG[7].location} />
+                    <AudreyLang language={AUDREY_LANG[8].language} proficiency={AUDREY_LANG[8].proficiency} location={AUDREY_LANG[8].location} />
+                    <AudreyLang language={AUDREY_LANG[9].language} proficiency={AUDREY_LANG[9].proficiency} location={AUDREY_LANG[9].location} />
+            </ol>
+        </div>
       <button>This is a button</button>
 
     </div>
