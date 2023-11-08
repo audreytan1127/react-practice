@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  /*max width dependent on designer*/
+  max-width: 1100px;
+  /*give padding so that it doesn't overflow when viewing on phone*/
+  padding: 0 20px;
+}
+
