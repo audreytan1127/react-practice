@@ -11,7 +11,7 @@ export const AUDREY_LANG =[
     },
     {
         language: "Javascript",
-        location: "CodeUp,",
+        location: "CodeUp",
         proficiency: "Intermediate"
     },
     {
