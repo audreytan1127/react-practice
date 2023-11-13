@@ -73,3 +73,9 @@
 .project-row{
   flex-direction: column;
 }
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+}

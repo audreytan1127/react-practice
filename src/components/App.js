@@ -7,7 +7,9 @@ function AudreyProjects(props) {
     return (
         <li className="column project-description">
             <h1 className="project">{props.project}</h1>
-            <p className="description">{props.description}</p>
+            <h2 className="description">{props.description}</h2>
+            <p className="frontend">{props.frontend}</p>
+            <p className="backend">{props.backend}</p>
         </li>
     );
 }
@@ -29,20 +31,32 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div className="App page-wrapper">
             <Header/>
             {/*Adding unordered list of projects and their description to load underneath header using reusable props*/}
-            <ul className="container">
+            <ul className="projects-container container">
+                <h1>Projects</h1>
                 <div className="row project-row">
                     <AudreyProjects project="memespace.fun"
-                                    description="Full-stack online multiplayer meme-making competition."/>
-                    <AudreyProjects project="movie saver"
-                                    description="Full-stack website to save movies you've watched, and create a shareable movie list!"/>
+                                    description="Full-stack online multiplayer meme-making competition."
+                                    frontend="Frontend Contributions: Wireframing and Deliverables report
+                                    | Website branding consistency using custom CSS |
+                                    WebSocket, STOMP, SockJS connection | Connecting frontend events to backend database changes
+                                    using decoupled application structure |
+                                     "
+                                    backend="Backend Contributions: Database architecture with MySQL and Spring | Bean Restructuring |
+                                     Deployment"/>
+
+                    <AudreyProjects project="Movie Night"
+                                    description="Full-stack website to save movies you've watched, and create a shareable movie list!"
+                                    frontend="Frontend Contributions: Styled and formatted cards for each movie | "
+                                    backend="Backend Contributions: API call structure"
+                    />
                 </div>
             </ul>
-            <div className="container">
-                    <h2>Frontend Languages / Frameworks</h2>
-                <ol className="row">
+            <div className="languages container">
+                    <h1>Frontend Languages / Frameworks</h1>
+                <ol className="frontend row">
                     <AudreyLang language={AUDREY_LANG[0].language} proficiency={AUDREY_LANG[0].proficiency}
                                 location={AUDREY_LANG[0].location}/>
                     <AudreyLang {...AUDREY_LANG[1]} />
@@ -52,8 +66,8 @@ function App() {
                     <AudreyLang {...AUDREY_LANG[5]}/>
                     <AudreyLang {...AUDREY_LANG[6]}/>
                 </ol>
-                <h2>Backend Languages / Frameworks</h2>
-                <ol className="row">
+                <h1>Backend Languages / Frameworks</h1>
+                <ol className="backend row">
                     <AudreyLang {...AUDREY_LANG[7]}/>
                     <AudreyLang {...AUDREY_LANG[8]}/>
                     <AudreyLang {...AUDREY_LANG[9]}/>

@@ -20,9 +20,9 @@ export function Header() {
 
     return (
         // JSX code to build header
-        <header className="App-header">
+        <header className="App-header container">
             <img src={logo} className="App-logo" alt="logo"/>
-            <h1> Audrey Tan:</h1>
+            <h1> Audrey Tan</h1>
             <p>
                 {/* Curly brackets make this a dynamic value that is being called when building html code. */}
                 {audreyFullStackAdj} Full-Stack Web Developer
